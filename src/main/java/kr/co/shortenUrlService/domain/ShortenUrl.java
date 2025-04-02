@@ -12,6 +12,7 @@ public class ShortenUrl {
     public ShortenUrl(String originalUrl, String shortenUrlKey){
         this.originalUrl = originalUrl;
         this.shortenUrlKey = shortenUrlKey;
+        this.redirectCount = 0L;
     }
 
     public static String generateShortenUrlKey(){
@@ -26,5 +27,9 @@ public class ShortenUrl {
         }
 
         return result.toString();
+    }
+
+    public String getShortenUrlKey() {
+        return shortenUrlKey;
     }
 }

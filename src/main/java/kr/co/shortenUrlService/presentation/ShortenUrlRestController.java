@@ -22,7 +22,7 @@ public class ShortenUrlRestController {
             @RequestBody @Valid ShortenUrlCreateRequestDTO shortenUrlCreateRequestDTO) {
         //서비스 코드를 추가해야한다. 그리고 dto타입으로 반환해야하나다
         ShortenUrlCreateResponseDTO shortenUrlCreateResponseDTO = simpleShortenUrlService.createShortenUrl(shortenUrlCreateRequestDTO);
-        return ShortenUrlCreateResponseDTO;
+        return shortenUrlCreateResponseDTO;
     }
 
     //key를 넘겨주면 리다이렉트해주는 api

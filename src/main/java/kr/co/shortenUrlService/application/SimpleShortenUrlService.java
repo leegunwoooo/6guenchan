@@ -22,6 +22,11 @@ public class SimpleShortenUrlService {
 
         ShortenUrl shortenUrl = new ShortenUrl(originalUrl, shortenUrlkey);
 
+        shortenUrlRepository.saveShortenUrl(shortenUrl);
+
+        //ShortenUrlCreateResponseDTO shortenUrlCreateResponseDTO = new ShortenUrlCreateResponseDTO(shortenUrl);
+
+        return new ShortenUrlCreateResponseDTO(shortenUrl);
     }
 
 }
